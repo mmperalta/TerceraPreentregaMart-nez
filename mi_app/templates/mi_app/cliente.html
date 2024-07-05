@@ -1,0 +1,26 @@
+{% extends "mi_app/index.html" %}
+{% block titulo %}
+<h1 class="mb-5">Clientes</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+<h3 class="mb-5">Pagina para clientes</h3>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre de cliente</th>
+            <th>Proyecto</th>
+        </tr>
+    </thead> 
+    <tbody>
+        {% for c in cliente %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.project }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>       
+</table>
+{% endblock contenido%}
