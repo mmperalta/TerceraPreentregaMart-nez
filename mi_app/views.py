@@ -32,14 +32,17 @@ def formaPago (request):
 
 def home(request):
     return render(request, 'mi_app/index.html')
+
 def pago(request):
-    return render(request, 'mi_app/pago.html')
+    contexto = {"pago":Pago.objects.all()}
+    return render(request, 'mi_app/pago.html', contexto)
 
 def cliente(request):
     contexto = {"cliente":Cliente.objects.all()}
     return render(request, 'mi_app/cliente.html', contexto)
 
 def proyecto(request):
-    return render(request, 'mi_app/proyecto.html')
+    contexto = {"proyecto": Proyecto.objects.all()}
+    return render(request, 'mi_app/proyecto.html', contexto)
 
 # Create your views here.

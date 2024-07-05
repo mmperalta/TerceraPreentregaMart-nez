@@ -5,4 +5,22 @@
 
 {% block contenido %}
 <h3 class="mb-5">Pagina de proyectos</h3>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre de proyecto</th>
+            <th>Cantidad de shots</th>
+        </tr>
+    </thead> 
+    <tbody>
+        {% for c in proyecto %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.nombre }}</td>
+            <td>{{ c.shots }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>       
+</table>
 {% endblock contenido%}

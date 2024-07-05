@@ -5,4 +5,22 @@
 
 {% block contenido %}
 <h3 class="mb-5">Pagina para pagos</h3>
+<table class="table table-stripped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Forma de pago</th>
+            <th>Descuento</th>
+        </tr>
+    </thead> 
+    <tbody>
+        {% for c in pago %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.formaPago }}</td>
+            <td>{{ c.descuento }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>       
+</table>
 {% endblock contenido%}
