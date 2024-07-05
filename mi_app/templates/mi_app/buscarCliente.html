@@ -1,0 +1,14 @@
+{% extends "mi_app/index.html" %}
+{% block titulo %}
+<h1 class="mb-5">Buscar cliente</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+<form action='{% url "encontrarCliente" %}' method="get">
+    {% csrf_token %}
+    <table class="table table-stripped">
+       <p> Ingresa patrón de búsqueda: <input type="text" name="buscar" id="buscar">   </p> 
+    </table>
+    <input type="submit" value="Buscar">
+</form>
+{% endblock contenido%}

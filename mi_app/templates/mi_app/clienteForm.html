@@ -1,0 +1,15 @@
+{% extends "mi_app/index.html" %}
+{% block titulo %}
+<h1 class="mb-5">Formulario para clientes</h1>
+{% endblock titulo %}
+
+{% block contenido %}
+<h3 class="mb-5">Pagina para clientes nuevos</h3>
+<form action="" method="Post">
+    {% csrf_token %}
+    <table class="table table-stripped">
+        {{ form }}    
+    </table>
+    <input type="submit" value="Agregar">
+</form>
+{% endblock contenido%}

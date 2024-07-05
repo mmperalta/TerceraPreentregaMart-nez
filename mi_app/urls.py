@@ -7,4 +7,13 @@ urlpatterns = [
     path('cliente/', cliente, name="cliente"),
     path('proyecto/', proyecto, name="proyecto"),
     path('sobremi/', sobremi, name="sobremi"),
+
+    #Formularios
+    path('clienteForm/', clienteForm, name="clienteForm"),
+    path('proyectoForm/', proyectoForm, name="proyectoForm"),
+    path('pagoForm/', pagoForm, name="pagoForm"),
+
+    #Buscar
+    path('buscarCliente/', buscarCliente, name="buscarCliente"),
+    path('encontrarCliente/', encontrarCliente, name="encontrarCliente"),
 ]
