@@ -11,6 +11,9 @@
             <th>ID</th>
             <th>Nombre de proyecto</th>
             <th>Cantidad de shots</th>
+            <th>Cotizacion</th>
+            <th>Fecha de entrega</th>
+            <th>Entregado</th>
         </tr>
     </thead> 
     <tbody>
@@ -19,6 +22,9 @@
             <td>{{ c.id }}</td>
             <td>{{ c.nombre }}</td>
             <td>{{ c.shots }}</td>
+            <td>{{ c.cotizacion }}</td>
+            <td>{{ c.fechaEntrega }}</td>
+            <td>{{ c.delivered }}</td>
         </tr>
         {% endfor %}
     </tbody>       

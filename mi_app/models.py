@@ -8,6 +8,12 @@ class Cliente (models.Model):
 
     def get_cliente_project(self):
         return self.project
+    
+    def __str__(self):
+        return f"{self.nombre}"
+    
+    class Meta: 
+        ordering = ["nombre"]
 
 class Proyecto (models.Model):
     nombre = models.CharField(max_length=50)
@@ -16,7 +22,18 @@ class Proyecto (models.Model):
     fechaEntrega = models.DateField()
     delivered = models.BooleanField()
 
+    def __str__(self):
+        return f"{self.nombre}"
+    
+    class Meta: 
+        ordering = ["-fechaEntrega"]
+
+
 class Pago (models.Model):
     formaPago= models.CharField(max_length=50)
     descuento = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.formaPago}"
+
 
